@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f9;
+    color: #333;
+}
+
+
+/* ==============================
+   LOGIN
+============================== */
+
+.login-body {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #6c5ce7,
+                    #8e7cff
+            );
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+    padding: 20px;
+}
+
+
+.login-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+            0 15px 40px
+            rgba(0, 0, 0, 0.18);
+
+    text-align: center;
+}
+
+
+.logo {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+
+.login-card h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   FORM
+============================== */
+
+.form-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #6c5ce7;
+
+    box-shadow:
+            0 0 0 3px
+            rgba(108, 92, 231, 0.12);
+
+}
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.btn {
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+
+.btn-primary {
+
+    background: #6c5ce7;
+
+    color: white;
+
+}
+
+
+.btn-primary:hover {
+
+    background: #5949d6;
+
+}
+
+
+.btn-danger {
+
+    background: #e74c3c;
+
+    color: white;
+
+}
+
+
+.btn-secondary {
+
+    background: #ddd;
+
+    color: #333;
+
+}
+
+
+.btn-full {
+    width: 100%;
+}
+
+
+/* ==============================
+   LOGIN INFO
+============================== */
+
+.login-info {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+
+    background: white;
+
+    padding: 20px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow:
+            0 2px 8px
+            rgba(0, 0, 0, 0.08);
+
+}
+
+
+.header h1 {
+
+    font-size: 24px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.header span {
+
+    font-size: 13px;
+
+    color: #6c5ce7;
+
+    font-weight: bold;
+
+}
+
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 35px auto;
+
+}
+
+
+/* ==============================
+   CARDS
+============================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+            0 3px 12px
+            rgba(0, 0, 0, 0.06);
+
+}
+
+
+.card-icon {
+
+    font-size: 32px;
+
+}
+
+
+.card h3 {
+
+    font-size: 13px;
+
+    color: #777;
+
+    margin-bottom: 5px;
+
+}
+
+
+.card strong {
+
+    font-size: 26px;
+
+}
+
+
+/* ==============================
+   PANEL
+============================== */
+
+.panel {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+            0 3px 12px
+            rgba(0, 0, 0, 0.06);
+
+}
+
+
+.panel-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.panel-header h2 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.panel-header p {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* ==============================
+   TABLE
+============================== */
+
+.table-container {
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th {
+
+    text-align: left;
+
+    background: #f7f7fa;
+
+    padding: 14px;
+
+    font-size: 13px;
+
+}
+
+
+td {
+
+    padding: 14px;
+
+    border-bottom:
+            1px solid #eee;
+
+    font-size: 14px;
+
+}
+
+
+tr:hover {
+
+    background: #fafafa;
+
+}
+
+
+/* ==============================
+   BADGES
+============================== */
+
+.badge {
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+.badge.admin {
+
+    background: #eee8ff;
+
+    color: #5d45d8;
+
+}
+
+
+.badge.operador {
+
+    background: #e8f4ff;
+
+    color: #2878b8;
+
+}
+
+
+.badge.cliente {
+
+    background: #e8f8ed;
+
+    color: #23844a;
+
+}
+
+
+/* ==============================
+   SMALL BUTTONS
+============================== */
+
+.btn-small {
+
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    margin-right: 5px;
+
+}
+
+
+.btn-edit {
+
+    background: #e8e4ff;
+
+    color: #5949d6;
+
+}
+
+
+.btn-delete {
+
+    background: #ffe5e2;
+
+    color: #d63829;
+
+}
+
+
+/* ==============================
+   MODAL
+============================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+            rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+.modal-content {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+}
+
+
+.modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.close {
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #777;
+
+}
+
+
+.modal-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+/* ==============================
+   CLIENTE
+============================== */
+
+.profile-card {
+
+    max-width: 500px;
+
+    margin: 20px auto;
+
+    text-align: center;
+
+    padding: 35px;
+
+    background: #f8f8fb;
+
+    border-radius: 15px;
+
+}
+
+
+.profile-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.profile-card h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.profile-card p {
+
+    margin: 12px;
+
+    color: #555;
+
+}
+
+
+/* ==============================
+   MESSAGES
+============================== */
+
+.message {
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+}
+
+
+.message.success {
+
+    background: #e8f8ed;
+
+    color: #23844a;
+
+}
+
+
+.message.error {
+
+    background: #ffe5e2;
+
+    color: #c0392b;
+
+}
+
+
+/* ==============================
+   UTILITIES
+============================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .panel-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .header {
+
+        padding: 15px;
+
+    }
+
+
+    .container {
+
+        width: 95%;
+
+    }
+
+}

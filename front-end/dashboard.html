@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - Gestão de Usuários</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div>
+
+        <h1>Gestão de Usuários</h1>
+
+        <span id="perfilUsuario">
+                Carregando...
+            </span>
+
+    </div>
+
+    <button
+            class="btn btn-danger"
+            onclick="logout()"
+    >
+        Sair
+    </button>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+        <div class="card">
+
+                <span class="card-icon">
+                    👥
+                </span>
+
+            <div>
+
+                <h3>Total de usuários</h3>
+
+                <strong id="totalUsuarios">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+                <span class="card-icon">
+                    👑
+                </span>
+
+            <div>
+
+                <h3>Administradores</h3>
+
+                <strong id="totalAdmins">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+                <span class="card-icon">
+                    ⚙️
+                </span>
+
+            <div>
+
+                <h3>Operadores</h3>
+
+                <strong id="totalOperadores">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+                <span class="card-icon">
+                    👤
+                </span>
+
+            <div>
+
+                <h3>Clientes</h3>
+
+                <strong id="totalClientes">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENSAGEM -->
+
+    <div id="mensagem"></div>
+
+
+    <!-- ÁREA ADMIN/OPERADOR -->
+
+    <section
+            id="areaUsuarios"
+            class="panel"
+    >
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>Usuários cadastrados</h2>
+
+                <p>
+                    Gerenciamento de usuários do sistema
+                </p>
+
+            </div>
+
+            <button
+                    id="btnNovoUsuario"
+                    class="btn btn-primary"
+                    onclick="abrirModalCadastro()"
+            >
+                + Novo usuário
+            </button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Perfil</th>
+                    <th>Ações</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="tabelaUsuarios">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ÁREA CLIENTE -->
+
+    <section
+            id="areaCliente"
+            class="panel hidden"
+    >
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>Meus dados</h2>
+
+                <p>
+                    Informações da sua conta
+                </p>
+
+            </div>
+
+        </div>
+
+        <div id="dadosCliente">
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- MODAL -->
+
+<div
+        id="modal"
+        class="modal hidden"
+>
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitulo">
+                Novo usuário
+            </h2>
+
+            <button
+                    class="close"
+                    onclick="fecharModal()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="usuarioForm">
+
+            <input
+                    type="hidden"
+                    id="usuarioId"
+            >
+
+
+            <div class="form-group">
+
+                <label for="nome">
+                    Nome
+                </label>
+
+                <input
+                        type="text"
+                        id="nome"
+                        required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="emailUsuario">
+                    E-mail
+                </label>
+
+                <input
+                        type="email"
+                        id="emailUsuario"
+                        required
+                >
+
+            </div>
+
+
+            <div
+                    class="form-group"
+                    id="campoSenha"
+            >
+
+                <label for="senhaUsuario">
+                    Senha
+                </label>
+
+                <input
+                        type="password"
+                        id="senhaUsuario"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="perfil">
+
+                    Perfil
+
+                </label>
+
+                <select id="perfil" required>
+
+                    <option value="ADMIN">
+                        Administrador
+                    </option>
+
+                    <option value="OPERADOR">
+                        Operador
+                    </option>
+
+                    <option value="CLIENTE">
+                        Cliente
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                        type="button"
+                        class="btn btn-secondary"
+                        onclick="fecharModal()"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                        type="submit"
+                        class="btn btn-primary"
+                >
+                    Salvar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
