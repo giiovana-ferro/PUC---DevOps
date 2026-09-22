@@ -1,4 +1,0 @@
-- name: Teste de alerta
-  run: |
-    echo "Testando alerta..."
-    exit 1
