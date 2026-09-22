@@ -6,12 +6,15 @@ import com.example.gestaousuarios.model.Perfil;
 import com.example.gestaousuarios.model.Usuario;
 import com.example.gestaousuarios.repository.UsuarioRepository;
 import com.example.gestaousuarios.service.UsuarioService;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
@@ -98,6 +101,7 @@ class UsuarioServiceTest {
         assertEquals(2, response.size());
         assertEquals("Giovana Ferro", response.get(0).getNome());
         assertEquals("Maria", response.get(1).getNome());
+
         verify(repository).findAll();
     }
 
@@ -110,6 +114,7 @@ class UsuarioServiceTest {
         assertNotNull(response);
         assertEquals("Giovana Ferro", response.getNome());
         assertEquals("giovana@email.com", response.getEmail());
+
         verify(repository).findById(1L);
     }
 
@@ -126,4 +131,3 @@ class UsuarioServiceTest {
         verify(repository).findById(99L);
     }
 }
-a
